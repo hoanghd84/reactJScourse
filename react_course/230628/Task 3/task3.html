@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(name, description, price) {
+                this._name = name;
+                this._description = description;
+                this._price = price;
+            }
+            multipleFunc(times = 1) {
+                return this._price * times;
+            }
+        }
+
+        class Model extends Car {
+            constructor(price, description, model) {
+                super(price, description);
+                this._model = model;
+            }
+            calPrice() {
+                return this._payable * 1.5;
+            }
+        }
+
+        myCar = new Car('Mazda', 'New', 10000);
+        console.log(myCar);
+        console.log(myCar.multipleFunc(4));
+        myCarModel = new Model('Mazda3', 'All New', 'sedan', 10000);
+        console.log(myCarModel.calPrice());
+
+        myCarModel = new Model('Mazda3', 'All New', 'sedan', 10000);
+        console.log(myCarModel);
+        console.log(`Your car price is ${myCar.price}, you have to pay ${myCarModel.calPrice()}USD.`);
+    </script>
+</body>
+
+</html>
