@@ -16,19 +16,19 @@ const Calculator = () => {
     }
 
     const handlePlus = () => {
-        setResult(parseInt(input.num1) + parseInt(input.num2))
+        setResult(Number(input.num1) + Number(input.num2))
     }
 
     const handleMinus = () => {
-        setResult(parseInt(input.num1) - parseInt(input.num2))
+        setResult(Number(input.num1) - Number(input.num2))
     }
 
     const handleMultiple = () => {
-        setResult(parseInt(input.num1) * parseInt(input.num2))
+        setResult(Number(input.num1) * Number(input.num2))
     }
 
     const handleDevide = () => {
-        setResult(parseInt(input.num1) / parseInt(input.num2))
+        setResult(Number(input.num1) / Number(input.num2))
     }
 
     return (
